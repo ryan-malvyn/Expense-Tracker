@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="appcontainer">
+        <div class="title">
+            <h1>Expense Tracker</h1>
+        </div>
+        <div class="balance">
+            <p>Your Balance</p>
+            <div class='currency'>NTD <span class="balance-amount">0</span></div>
+        </div>
+        <div class="incomeOrExpense">
+            <div class="income-container">
+                <h2>Income</h2>
+                <div class='currency income-counter'>NTD <span class="income-amount">0</span></div>
+            </div>
+            <div class="divider"></div>
+            <div class="expense-container">
+                <h2>Expenses</h2>
+                <div class='currency expense-counter'>NTD <span class="expense-amount">0</span></div>
+            </div>
+        </div>
+        <div class="history-area">
+            <h2>History</h2>
+            <div class="history-list">
+                <ul class="history-items">
+                </ul>
+            </div>
+        </div>
+        <div class="new-transaction">
+            <div class="formcontainer">
+                <form>
+                    <div class="transactionInfo">
+                        <label for="transactioninfo">Transaction Details</label>
+                        <input type="text" placeholder="Enter text..." name="transactioninfo" class="textinput transactionDetails">
+                    </div>
+
+                    <div class="transactionamount">
+                        <label for="transactionamount">Enter your transaction amount</label>
+                        <p>positive(+) for income, negative(-) for expenses.</p>
+                        <input type="text" placeholder="Enter transaction amount" name="transactionamount" class="textinput transactionAmount">
+                    </div>
+
+                    <button id="addbutton">Add transaction</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

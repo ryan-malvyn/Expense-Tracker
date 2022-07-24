@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+:root{
+    --yellow1:#FFC812;
+    --yellow2:#FAB23D;
+    --gray1:#383838;
+    --gray2:#262626;
+
+    --fontfam:'Open Sans', sans-serif;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    background-color:black;
+    color:white;
+    font-family:var(--fontfam);
+    height:100vh;
+    align-items:center;
+}
+
+.appcontainer{
+    padding:4rem 5rem;
+    background-color:#262626;
+    display:flex;
+    flex-direction:column;
+    gap:1.5rem;
+    justify-content:space-between;
+    border-radius:2rem;
+    width:60vh;
+    max-height:95vh;
+    min-height:95vh;
+    box-shadow: 5px 7px 6px 0px var(--yellow2);
+}
+
+.balance{
+    padding:1.5rem;
+    display:flex;
+    flex-direction:column;
+    border-radius:2rem;
+    box-shadow: 5px 7px 6px 0px rgba(0,0,0,0.67);
+    background-color:var(--gray1);
+}
+
+.balance-amount{
+    font-size:40px;
+}
+
+.incomeOrExpense{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:1rem 2.5rem; 
+    border-radius:2rem;
+    box-shadow: 5px 7px 6px 0px rgba(0,0,0,0.67);
+    background-color:var(--gray1);
+}
+
+.divider{
+    justify-self:center;
+    height:100px;
+    width:3px;
+    border-radius:1rem;
+    background-color:red;
+}
+
+.currency{
+    font-size:20px;
+}
+
+.income-counter{
+    text-align:left;
+    color:greenyellow;
+}
+
+.expense-counter{
+    text-align:right;
+    color:red;
+}
+
+.negativeHighlighter {
+    color:red;
+}
+
+.positiveHighlighter {
+    color:greenyellow;
+}
+
+.history-area{
+    padding:3rem;
+    display:inline-block;
+    overflow-y: scroll;
+    border-radius:2rem;
+    box-shadow: 5px 7px 6px 0px rgba(0,0,0,0.67);
+    background-color:var(--gray1);
+}
+
+.history-items{
+    display:flex;
+    flex-direction:column;
+    margin-top:20px;
+    gap:20px;
+    list-style:none;
+}
+
+.history-list{
+    border-top:1px solid var(--yellow2);
+}
+
+.transactionInfo{
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.textinput{
+    padding:0.5rem;
+    border-radius:1rem;
+    border:1px solid var(--yellow2);
+    background-color:lightgray;
+    margin-bottom:2rem;
+    outline:none;
+}
+
+.transactionamount{
+    display:flex;
+    flex-direction:column;
+    gap:0.5rem;
+}
+
+.transactionamount p{
+    font-size:12px;
+}
+
+.history-list-item{
+    display:flex;
+    justify-content:space-between;
+    background-color:lightgray;
+    color:black;
+    padding:0.5rem 1rem;
+    position:relative;
+}
+
+.delete-btn{
+    position:absolute;
+    padding:0.5rem;
+    top:0px;
+    bottom:0px;
+    background-color:red;
+    font-weight: bold;
+    color:white;
+    border:none;
+    outline:none;
+    transition:left 150ms ease-in-out;
+    visibility:hidden;
+}
+
+.delete-btn-show{
+    visibility:visible;
+    left:250px;
+}
+
+.slide-right {
+	-webkit-animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.expense-list-item{
+    border-right:5px solid red;
+}
+
+.income-list-item{
+    border-right:5px solid greenyellow;
+}
+
+.formcontainer form{
+    display:flex;
+    flex-direction:column;
+    border-radius:2rem;
+    box-shadow: 5px 7px 6px 0px rgba(0,0,0,0.67);
+    background-color:var(--gray1);
+    padding:2rem;
+}
+
+#addbutton{
+    padding:0.5rem 0;
+    border-radius:2rem;
+    border:none;
+    outline:none;
+    background-color:var(--gray2);
+    color:var(--yellow2);
+    font-weight:bold;
+}
